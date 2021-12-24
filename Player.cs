@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Variáveis publicas para poder editar na Unity
     public float speed;
     private Rigidbody2D rig;
     public float jump_force;
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
             {
                 if(doubleJump)
                 {
+                    // Você pode definir a força do double jump aqui
                     rig.AddForce(new Vector2(0f, jump_force * 2f), ForceMode2D.Impulse);
                 doubleJump = false;
                 }
